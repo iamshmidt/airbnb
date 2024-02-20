@@ -85,7 +85,7 @@ function RootLayoutNav() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="(modals)/login" options={{ title:'Log in or sign up', headerTitleStyle:{fontFamily:'mon-sb'}, presentation: 'modal', headerLeft: ()=> (<TouchableOpacity onPress={()=> router.back()}><Ionicons name="close-outline" size={29}></Ionicons></TouchableOpacity>) }} />
-        <Stack.Screen name="listing/[id]" options={{headerTitle:''}}></Stack.Screen>
+        <Stack.Screen name="listing/[id]" options={{headerTitle:'', headerTransparent:false}}></Stack.Screen>
         <Stack.Screen name="(modals)/booking" options={{headerTitle:'',animation:'fade', presentation:'transparentModal',headerLeft: ()=> (<TouchableOpacity onPress={()=> router.back()}><Ionicons name="close-outline" size={29}></Ionicons></TouchableOpacity>) }}></Stack.Screen>
       </Stack>
   );
