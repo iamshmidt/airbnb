@@ -4,6 +4,8 @@ import { Link, Stack } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import listingsData from '../../assets/data/airbnb-listings.json';
+import listingsDataGeo from '../../assets/data/airbnb-listings.geo.json';
+import ListingsMap from '@/components/ListingsMap';
 // assets\data\airbnb-listings.json
 
 
@@ -18,7 +20,8 @@ export default function Page() {
       <Stack.Screen options={{
         header: () => <ExploreHeader onCategoryChanged={onDataChanged}></ExploreHeader>
       }} />
-      <Listings listings={items} category={category}/>
+      {/* <Listings listings={items} category={category}/> */}
+      <ListingsMap listings={listingsDataGeo}/>
     </View>
   );
 }
